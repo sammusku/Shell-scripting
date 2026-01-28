@@ -2,6 +2,6 @@
 
 #===adding timestamp in sec==
 
-TIMESTAMP=$(date)
+TIMESTAMP=$(date +%s)
 
 echo "script executed at :$TIMESTAMP"
