@@ -5,11 +5,11 @@
 NUMBER=$1
 
 if [ $NUMBER -gt 25 ]; then
-echo "given number is greater than 25"
+echo "$NUMBER is greater than 25"
 
 elif [ $NUMBER -lt 25 ]; then
-echo "given number is less than 25"
+echo "$NUMBER is less than 25"
 
 else
-echo "given number is equal to 25"
+echo "$NUMBER is equal to 25"
 fi
