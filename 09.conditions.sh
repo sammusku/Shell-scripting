@@ -2,7 +2,7 @@
 
 #===syntax with conditions===
 
-NUMBER=25
+NUMBER=$1
 
 if [ $NUMBER -gt 25 ]; then
 echo "given number is greater than 25"
