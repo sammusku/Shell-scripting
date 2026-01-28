@@ -14,15 +14,18 @@ else
 echo "$NUMBER is equal to 25"
 fi
 
-USERID=$1
+USERID=$2
 
-if [ $USERID =! 1 ]; then
-echo "$USERID is ec2-user"
+if [ $USERID -eq 0 ] ; then
+echo "$USERID is root user"
 
-elif [ $USERID > 1 ]; then 
-echo "$USERIND is other user"
+elif [ $USERID -gt 10 ] ; then 
+echo "$USERID is other user"
 
-else [ $USERID == 0 ]; then
-echo "$USERUID is root user"
+elif [ $USERID -lt 10 ] ; then
+echo "$USERID is ham "
+
+else
+echo "none"
 
 fi
