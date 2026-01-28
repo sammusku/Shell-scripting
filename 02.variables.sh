@@ -1,6 +1,6 @@
 #!/bin/bash
 
-====change the names ===
+#====change the names ===
 
 PERSON1=ramesh
 PERSON2=suresh
