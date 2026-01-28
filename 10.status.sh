@@ -8,3 +8,4 @@ exit 1
 fi
 
 echo "installing nginx"
+dnf install nginx -y
