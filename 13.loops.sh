@@ -4,7 +4,7 @@
 
 USERID=$(id -u)
 LOGS_FOLDER="/var/log/shell-script"
-LOGS_FILE="/var/log/shell-script/$0.log
+LOGS_FILE="/var/log/shell-script/$0.log"
 
 if [ $USERID -ne 0 ]; then
  echo "please use root user to access" |tee -a $LOGS_FILE
@@ -29,3 +29,4 @@ do
   else
   echo "$package already installed,....skipping"
 done
+
