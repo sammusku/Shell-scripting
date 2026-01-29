@@ -12,7 +12,7 @@ if [ $USERID -ne 0 ]; then
 fi
 VALIDATE(){
  if [ $1 -ne 0 ]; then
-  echo "$2-----failure" |tree -a $LOGS_FILE
+  echo "$2-----failure" |tee -a $LOGS_FILE
   exit 1
  else
   echo "$2------success"
@@ -24,12 +24,13 @@ for package in $@  #sudo sh 13.loops.sh nginx mysql nodejs...etc
 do 
 
   dnf list installed $package -y &>> $LOGS_FILE
-  if [ $? -ne 0 ]; then
+if [ $? -ne 0 ]; then
   echo "$package not installed,installing now"
   dnf install $package -y &>> $LOGS_FILE
   VALIDATE $? "$package installation"
-  else
+else
   echo "$package already installed,....skipping"
+fi  
 
 done 
 
