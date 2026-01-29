@@ -11,7 +11,7 @@ exit 1
   fi
 
 VALIDATE(){
-if [ $? -ne 0 ]; then
+if [ $1 -ne 0 ]; then
   echo "nginx installation.....failure"
 else
   echo "nginx installation......success"
