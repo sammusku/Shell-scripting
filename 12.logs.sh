@@ -12,9 +12,9 @@ exit 1
 
 VALIDATE(){
 if [ $1 -ne 0 ]; then
-  echo "nginx installation.....failure"
+  echo "$2 .....failure"
 else
-  echo "nginx installation......success"
+  echo "$2 ......success"
 fi 
 
 }
