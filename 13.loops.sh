@@ -24,13 +24,13 @@ for package in $@  #sudo sh 13.loops.sh nginx mysql nodejs...etc
 do 
 
   dnf list installed $package -y &>> $LOGS_FILE
-  if [$? -ne 0 ]; then
+  if [ $? -ne 0 ]; then
   echo "$package not installed,installing now"
   dnf install $package -y &>> $LOGS_FILE
   VALIDATE $? "$package installation"
   else
   echo "$package already installed,....skipping"
 
-done  
+done 
 
 
